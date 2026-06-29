@@ -1,137 +1,175 @@
-📧 Spam Email Classifier
+# 📧 Spam Email Classifier
 
-A Machine Learning project that classifies email messages as Spam or Ham (Not Spam) using Natural Language Processing (NLP) and multiple classification algorithms.
+A Machine Learning project that classifies email messages as **Spam** or **Ham (Not Spam)** using **Natural Language Processing (NLP)** and multiple Machine Learning algorithms.
 
-🚀 Features
-Email text preprocessing
-Stopword removal
-Stemming
-TF-IDF feature extraction
-Multiple ML models
-Automatic best model selection
-Interactive Streamlit web application
-Command Line Interface (CLI)
-Model comparison
-Download prediction results
-🛠 Technologies Used
-Python
-Pandas
-NumPy
-Scikit-learn
-NLTK
-Streamlit
-Plotly
-Matplotlib
-Joblib
-📂 Project Structure
+---
+
+## 🚀 Features
+
+- 📧 Email text preprocessing
+- 🔤 Tokenization
+- 🚫 Stopword removal
+- ✂️ Stemming using Porter Stemmer
+- 📊 TF-IDF feature extraction
+- 🤖 Multiple Machine Learning models
+- 🏆 Automatic best model selection
+- 💻 Command Line Interface (CLI)
+- 🌐 Interactive Streamlit Web Application
+- 📈 Model comparison
+- 💾 Save and load trained models using Joblib
+
+---
+
+## 🛠️ Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- NLTK
+- Streamlit
+- Matplotlib
+- Plotly
+- Joblib
+
+---
+
+## 📂 Project Structure
+
+```text
 Spam-Email-Classifier/
 │
 ├── data/
 │   ├── spam.csv
 │   └── processed_spam.csv
 │
-├── models/
-│   ├── Naive_Bayes.pkl
-│   ├── SVM.pkl
-│   ├── Logistic_Regression.pkl
-│   ├── Random_Forest.pkl
-│   ├── best_model.pkl
-│   ├── tfidf_vectorizer.pkl
-│   └── model_results.csv
-│
 ├── images/
-│   ├── model_accuracy.png
-│   └── confusion_matrix.png
 │
+├── models/
+│
+├── app.py
 ├── data_preprocessing.py
 ├── train_model.py
 ├── spam_predictor.py
-├── app.py
 ├── utils.py
+│
 ├── requirements.txt
 ├── README.md
 └── .gitignore
-📊 Dataset
+```
 
-The project uses the SMS Spam Collection Dataset.
+---
 
-Columns:
+## 📊 Dataset
 
-label
-text
+This project uses the **SMS Spam Collection Dataset**.
 
-Target:
+**Columns**
 
-ham → 0
-spam → 1
-🧹 Data Preprocessing
+- label
+- text
+
+**Target**
+
+| Label | Value |
+|-------|-------|
+| Ham | 0 |
+| Spam | 1 |
+
+---
+
+## 🧹 Data Preprocessing
 
 The following preprocessing steps are performed:
 
-Convert text to lowercase
-Remove punctuation
-Remove numbers
-Remove special characters
-Tokenization
-Remove stopwords
-Apply Porter Stemming
-🔤 Feature Extraction
+- Convert text to lowercase
+- Remove punctuation
+- Remove numbers
+- Remove special characters
+- Tokenization
+- Stopword removal
+- Porter Stemming
 
-Text is converted into numerical features using:
+---
 
-TF-IDF Vectorizer
-🤖 Machine Learning Models
+## 🔤 Feature Extraction
+
+The cleaned email text is converted into numerical features using:
+
+- TF-IDF Vectorizer
+
+---
+
+## 🤖 Machine Learning Models
 
 The following models are trained and compared:
 
-Multinomial Naive Bayes
-Support Vector Machine (LinearSVC)
-Logistic Regression
-Random Forest Classifier
+- Multinomial Naive Bayes
+- Support Vector Machine (SVM)
+- Logistic Regression
+- Random Forest Classifier
 
-The model with the highest accuracy is saved automatically as:
+The best-performing model is automatically saved.
 
-models/best_model.pkl
-📈 Evaluation Metrics
+---
 
-The models are evaluated using:
+## 📈 Evaluation Metrics
 
-Accuracy
-Precision
-Recall
-F1 Score
-Confusion Matrix
-▶ Installation
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- Confusion Matrix
 
-Clone the repository:
+---
 
-git clone https://github.com/yourusername/Spam-Email-Classifier.git
 
-Move into the project:
 
-cd Spam-Email-Classifier
+## ▶️ How to Run
 
-Install dependencies:
+### 1️⃣ Preprocess the Dataset
 
-pip install -r requirements.txt
-▶ Run the Project
-Step 1
-
-Preprocess the dataset
-
+```bash
 python data_preprocessing.py
-Step 2
+```
 
-Train models
+### 2️⃣ Train the Models
 
+```bash
 python train_model.py
-Step 3
+```
 
-Run CLI application
+### 3️⃣ Run the CLI Application
 
+```bash
 python spam_predictor.py
-Step 4
+```
 
-Launch Streamlit
+### 4️⃣ Launch the Streamlit Web App
 
+```bash
 streamlit run app.py
+```
+
+## 📌 Future Improvements
+
+- Use a larger email dataset
+- Deploy the application online
+- Add BERT-based text classification
+- Integrate Gmail API
+- Detect phishing emails
+- Deep Learning using LSTM
+
+---
+
+## 🎯 Skills Demonstrated
+
+- Natural Language Processing (NLP)
+- Text Preprocessing
+- TF-IDF Vectorization
+- Binary Classification
+- Machine Learning Model Comparison
+- Streamlit Deployment
+- Model Serialization using Joblib
+
+---
